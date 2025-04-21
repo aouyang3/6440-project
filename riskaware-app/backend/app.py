@@ -38,8 +38,9 @@ def calculate_age(birthdate, encounter_date):
 
 #firestore certificate json file name here, place file in same directory
 firebase_cred_path = os.environ['FIREBASE_CREDENTIAL_PATH']
-cred = credentials.Certificate('/mount/src/6440-project/riskaware-app/backend/cs6440-ca243-firebase-adminsdk-fbsvc-17837a36a9.json')
-initialize_app(cred)
+if not firebase_admin._apps:
+    cred = credentials.Certificate('/mount/src/6440-project/riskaware-app/backend/cs6440-ca243-firebase-adminsdk-fbsvc-17837a36a9.json')
+    initialize_app(cred)
 
 
 db = firestore.client()
