@@ -6,9 +6,9 @@ import json
 from datetime import datetime, date
 
 cvd_model = pickle.load(open('/mount/src/6440-project/riskaware-app/backend/cvd_model.pkl', 'rb'))
-cancer_model = pickle.load(open('cancer_model.pkl', 'rb'))
-stroke_model = pickle.load(open('stroke_model.pkl', 'rb'))
-diabetes_model = pickle.load(open('diabetes_model.pkl', 'rb'))
+cancer_model = pickle.load(open('/mount/src/6440-project/riskaware-app/backend/cancer_model.pkl', 'rb'))
+stroke_model = pickle.load(open('/mount/src/6440-project/riskaware-app/backend/stroke_model.pkl', 'rb'))
+diabetes_model = pickle.load(open('/mount/src/6440-project/riskaware-app/backend/diabetes_model.pkl', 'rb'))
 
 # Calculating age
 def calculate_age(birthdate, encounter_date):
