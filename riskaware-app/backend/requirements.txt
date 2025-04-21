@@ -7,4 +7,3 @@ scikit-learn
 requests
 python-dotenv
 model_inference
-pickle5
