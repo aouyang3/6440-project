@@ -244,6 +244,5 @@ def get_synthea_user_data():
     return jsonify(user_data)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="https://6440-project-5vnbkxsym3hbzyy7stuk4w.streamlit.app")
 
