@@ -74,7 +74,7 @@ def get_recommendations():
     
     data = request.get_json()
 
-    # encounter_res = requests.get("http://localhost:5000/synthea_user_data", params={"user_id": user_id})
+    # encounter_res = requests.get("https://6440-project-5vnbkxsym3hbzyy7stuk4w.streamlit.app//synthea_user_data", params={"user_id": user_id})
     # if encounter_res.status_code ==200:
     #     encounter_date = encounter_res.json()["encounters"][-1]["START"]
     #     birthdate = data.get("BIRTHDATE")
@@ -159,7 +159,7 @@ def get_synthea_patient_info():
     for doc in docs:
         data = doc.to_dict()
 
-        encounter_res = requests.get("http://localhost:5000/synthea_user_data", params={"user_id": user_id})
+        encounter_res = requests.get("https://6440-project-5vnbkxsym3hbzyy7stuk4w.streamlit.app//synthea_user_data", params={"user_id": user_id})
         if encounter_res.status_code ==200:
             encounter_date = encounter_res.json()["encounters"][-1]["START"]
             birthdate = data.get("BIRTHDATE")
