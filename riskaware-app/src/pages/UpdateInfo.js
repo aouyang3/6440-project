@@ -30,7 +30,7 @@ function UpdateInfo() {
 
   useEffect(() => {
     if (patientId) {
-      fetch(`http://localhost:5000/synthea_patient_info?user_id=${patientId}`)
+      fetch(`https://6440-project-5vnbkxsym3hbzyy7stuk4w.streamlit.app/synthea_patient_info?user_id=${patientId}`)
         .then((res) => res.json())
         .then((data) => {
           const clean = (str) => str?.replace(/[^a-zA-Z\s\-']/g, "") || "";
@@ -67,7 +67,7 @@ function UpdateInfo() {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    fetch("http://localhost:5000/update_patient_info", {
+    fetch("https://6440-project-5vnbkxsym3hbzyy7stuk4w.streamlit.app/update_patient_info", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ patientId, ...formData }),
